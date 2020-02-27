@@ -1,0 +1,63 @@
+Strings
+    Interpolated String Expression
+        The string argument of the WriteLine method call is an interpolated string expression. 
+        It's a kind of template that lets you construct a single string (called the result string) 
+        includes embedded code
+        Interpolated string expressions are particularly useful for inserting values into a string or concatenating 
+            concatenating - joining together several strings.
+        Interpolated String Expressions MUST have:
+            A string literal that begins with the $ character before its opening quotation mark character
+            One or more interpolation expressions. 
+                An interpolation expression is indicated by an opening and closing brace ({ and }).
+                if null is used as the expression, it resolves to "" or String.Empty
+                if not null, the expression .ToString is used
+        Format Strings
+            String interpolation lets you specify format strings that control the formatting of particular types.
+            Interpolated Expression is followed by a :
+                For DateTime datatype:
+                    "d" is a date and time format string that represents the short date format. 
+                    "t" (to display the short time format)
+                    "y" (to display the year and month)
+                    "yyyy" (to display the year as a four-digit number). 
+                    "HH" (to display hour only)
+                For Double datatype:
+                    "C2" is a numeric format string that represents a number as a currency value with two digits after the decimal point.
+                    "e" (for exponential notation)
+                    "F3" (for a numeric value with three digits after the decimal point).
+                    "N2" (for just 2 decimal points)
+            ex: Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.");
+            Adding space inside strings/variables
+                {var,int}  - the int controls the amount of minimum space when printing the string. 
+                    The space is the same, no matter how long the var output actually is.
+                    Alignment goes before the format string
+                    A negative number aligns var left
+                    A positive number aligns var right
+            ex: Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");
+            {<interpolationExpression>}
+                Can be used instead of Format strings.
+
+Git
+    version control system
+    source control management tool
+    Repository
+        a folder that git takes control of
+            .git/
+            regularfiles.txt
+        Steps
+            1. (Makes changes)
+            2. (record those changes in git locally)
+                git add <path>
+                git commit -m "description of changes"
+            3. (upload those recorded changes to remote (github) )
+                git push
+    Methods
+        git init
+            makes new repository locally
+
+    Errors (how to handle them)
+        1. copy out any files you are worried about losing
+        2. delete the repository
+        3. clone back from github
+        (or can google the error message LOL)
+            git status
+                safe command that asks git to tell you what is going on in current repository

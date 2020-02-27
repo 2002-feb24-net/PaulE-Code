@@ -1,0 +1,97 @@
+Navigating VS Code
+
+General:
+
+    Highlighting in terminal auto copies
+    Right clicking in terminal auto pastes
+    
+    bash is a shell program that lets us run many programs using a text-based interface.
+    VS Code is a text editor / IDE for many languages
+    VS Code can open folders as well as files
+        We have configured its built-in terminal to be Git Bash instead of default Powershell.
+    .NET Core SDK helps us compile and run C#
+
+
+Commands (run in terminal):
+
+    ctrl + ~ to pull up the terminal
+        cd <dir>
+            /c/DirName = to nav to folder by specific address
+    	    Yellow text = where you are
+    	    ~ = home directory
+    	    .. = go up one directory
+            dirName = relative path, using current directory as a base
+        ls <dir>
+            list contents of a directory (or the current directory, by default)
+        mkdir <dir>
+            create a directory
+        rm <path>
+            delete a file
+        rm -r <path>
+            delete a directory
+        mv <path1> <path2>
+            rename/move a file/directory
+        clone creates a folder that is a copy of the original file. Used with github.
+        	git clone github.com/reuvheruihru
+
+Git Bash (run in terminal):
+        git clone
+            download a local copy of a repository, with all the history of past versions.
+        git pull
+            update your local repository with all new commits from the remote (GitHub).
+            will fail if any local changes conflict.
+        git status
+            report on state of local repository, including any untracked files, unpushed commits, etc.
+        git add
+            stage changes to be committed.
+            use "." to stage all changes in the currect directory.
+        git restore --staged <file>
+            unstages changes
+            use "." to unstage all changes in the current directory
+        git commit
+            record a permanent commit of changes to the local repository.
+            use "-m" to add a commit message in-line. launches nano otherwise.
+        git push
+            upload all new commits to the remote (GitHub).
+            will fail if there are already un-pulled commits there.
+            will fail if you lack permissions.
+Git workflow for class notes:
+    1. clone
+    2. pull
+    3. repeat step 2
+        git branch
+            creates a new branch, which is a new commit path for your git tree
+        git checkout <name> 
+            puts directory on branch (name) for further commits
+        git checkout -b [yourbranchname]
+            puts directory on a newly created branch (yourbranchname) for further commits
+        git merge <name>
+            merges the contents of two branches and all their parents, the (name) and the currently selected directory
+        git rebase <branchName>
+            sets the current branch as a child commit of (branchname) commit
+        git log
+            Shows the commit tree, used for getting old hashes
+                Hashes are long, but you only have to type enough for Git to uniquely identify the hash.
+        ^
+            Moves up one commit, used with ref names. (eg. git checkout bugFix^)
+        ~<num>
+            Moves up a specified number of commits. (eg. git checkout bugFix~4)
+        git branch -f master HEAD~3
+            Moves the master branch to 3 parents behind the head.
+"Head" is the term used to described the currently checked out commit. 
+    Typically follows the active branch, but can be detached from branch.
+        
+
+Dotnet (run in terminal):
+    $ dotnet 
+        new (creates new .NET projects)
+        new console (New console application template)
+        new console -o HelloWorld    (creates a HelloWorld application template using dotnet)
+        dotnet restore (???)
+        dotnet build
+            compiles the code
+        dotnet run 
+            used to run projects, will also compile
+        dotnet CLI (???)
+    $ dotnet run -p HelloWorld   (says run a project (-p) with name (HelloWorld) in currently selected folder)
+

@@ -1,0 +1,201 @@
+ List<T> class
+    Code: using System.Collections.Generic; (allows for collections class, including lists)
+    Lists can grows and shrink
+    Can be referenced with indexes
+    Methods
+        .Add
+            add to the list
+        .Remove()
+            removes by value or index
+        .Count
+            returns how many items are in a List
+        .IndexOf
+            returns index of a value in a list
+        .Sort
+            sorts the list in a standard way. for strings, this is alphebetically
+
+
+
+C#
+    variables are only visable within its scope ({})
+    All methods must have certain things
+        1. a name 
+        2. a return value
+        3. a list of perameters
+    Access Modifiers
+        private
+            it can only be accessed by code inside the class
+    Members
+        In classes, every declaration is a Member
+            properties are any variables with a getter ans setter
+            the code is methods
+            Constructor
+                a constructor is a member with the same name at the class
+                defines the code that is run upon class creation
+    Exceptions
+        The standard way of indicating that a method cannot complete its work successfully 
+        The type of exception and the message associated with it describes the error
+        Examples:
+            InvalidOperationException
+            ArgumentOutOfRangeException
+        throw/catch
+            You use the try and catch statements to mark a block of code that may throw exceptions and to catch those errors that you expect. 
+            Example:
+                try
+                {
+                    var invalidAccount = new BankAccount("invalid", -55);
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    Console.WriteLine("Exception caught creating account with negative balance");
+                    Console.WriteLine(e.ToString());
+                }
+    Methods
+        Console.Write()   - does not go to next line
+        Console.WriteLIne   -  does go to next line
+        throw
+            throw new ArgumentOutOfRangeException()
+        \t 
+            inserts a tab to format the output
+    Classes
+         StringBuilder 
+            class to format a string that contains one line. 
+                var report = new System.Text.StringBuilder();
+            Methods
+                .AppendLine
+                    report.AppendLine("Date\t\tAmount\tBalance\tNote");
+    Data type
+        DateTime
+            DateTime.Now
+        
+
+
+
+
+Strings
+    Console.ReadLIne() returns user input string
+    StringComparison.InvariantCultureIgnoreCase
+        Used with .Equals to ignore case
+    Strings are a reference type, not a data type
+    $
+        When you precede a string with the $ character, you can embed C# code in the string declaration.
+
+    Methods
+        .ToUpper()
+        Convert.ToInt32(string)
+            makes a string a int32 datatype
+        .Contains()    
+            check if a string contains another string 
+            case sensitive by default, but ther eis another version of the method that isnt case sensitive
+        .EndsWith()
+        .StartsWith()
+        .Equals()
+            does the same thing as ==
+        .IndexOf()
+            searches through a string for some data
+            tells you where in the string a char or string is located  (-1 for false)
+        .SubString()
+            tells it where to start.
+                if given one perameter, starts there and goes to end 
+                if given 2 perms, goes point to point
+            includes the start point, use +1 to start after
+        .Length
+            Returns how long a string is
+        .Split()
+            Makes an array, breaking it based on what char you put as a perameter
+        .PadLeft(int x, char pad)
+        .PadRight(int x, char pad)
+        .Replace(string x, string y)
+            Replaces any x with y
+            can be string or char
+        .ToUpper()
+            all caps
+        .ToLower()
+            all lowercase
+        .Concat(array)
+            combines string or char array into a string
+
+
+
+
+Chars
+    Like strings, but only one character. 
+    Made with ' ' 
+    Console.Read() returns user entered char
+
+
+
+
+Arrays 
+    Declared with []
+        string[] words = 
+    Can be of any data type you want
+    Fixed length
+    can only hold one type of thing in a single array
+    Can access values by index
+        int firstValue = numbers[0];
+    Can also modify values by index
+    Every data types has a default values  
+        ints, 0
+    Is a reference type, not a data type.
+    Creation
+        1) get it from a built in method
+            string[] words = "a sentence".Split(' ');
+        2) make it with default values
+            int[] numbers = new int[int length];
+        3) array initializer
+            int[] moreNumbers = new int[] {1,2,3,4,5};
+        4) 2nd array initializer
+            int[] moreNumbers2 = {1,2,3,4,5};
+    Methods
+        Array.Reverse(array x)
+            reverses the order of an array
+        .Length
+        Array.Copy(arry1,array2,array3)
+            copies an existing array
+            keep in mind that they have to be the same length
+            can put in multiple arrays at once though
+        Array.IndexOf(array x, value)
+            finds the index of a value in a specified array
+        .append(data)
+            adds data to the end
+        .delete(index)
+            searches for and deletes data
+        
+
+
+
+
+
+Logic
+    foreach
+        You can iterate through arrays with a for each loop:
+            var names = new List<string> { "Paul", "Ana", "Felipe" };
+            foreach (var name in names)
+                    {
+                        Console.WriteLine($"Hello {name.ToUpper()}!");
+                    }
+     switch (Case)
+            {   
+                case 1:
+                addNumbers(a);
+                break;
+                case 2:
+                subtractNumbers(a);
+                break;
+                case 3:
+                multiplyNumbers(a);
+                break;
+                case 4:
+                divideNumbers(a);
+                break;
+            }
+
+
+
+
+Extra
+    ``` before paste to do blocks in Slack 
+    for debug
+        F1 > debug > generate assest > ??
+        can also open file, specific project folder, and it will pop up in corner to install debug assets      

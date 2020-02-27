@@ -1,0 +1,240 @@
+General
+    Bash keeps a history of all your typed commands. Use the up arrow in the command prompt to scroll back in history
+        down arrow goes back forward.
+        every time you enter a new command, you are back at the bottom of the history.
+    Tab completion
+        applies to file names and folder names, but some commands as well.
+        can start typing something, then hit tab to finish the name.
+        cw + (press tab) = Console.WriteLine()
+    Console.ReadLine(); = takes input from user
+    int.Parse(var); = converts string to an int
+    Ctrl+C ends a looping console
+
+
+Terminal Semantics
+    [command/program] ([subcommand]) (options)
+        Sometimes there is no subcommand
+        Options examples:
+            --option-one
+            -o (single letter options are usually short for a longer command) (short for --output-dir)
+            -m "message" (the thing after a 'dash letter' is almost always a parameter)
+    .. (which specifies going to the parent directory) can be chained together (../..)
+    absolute paths start with a / and have the same meaning no matter where you start
+        e.g. /c/Revature/trainer-code
+    relative paths do not start with / , are relative to the currently selected folder.
+        e.g. trainer-code  (while inside Revature folder)
+        e.g. ./newfolder
+    *  
+        anything when using directories. e.g. *.txt returns all text files
+        0 or more of any character
+    " " 
+        are used to group data. Lets it know that the spaces are not seperating parts of a command, ignored otherwise
+    $ 
+        expands the value of a variable
+            can also use terminal and $ to set variables
+                ADC=123 , echo $ABC
+    ' ' 
+        tells terminal to takes everything inside very literally, and not as variables.
+    |
+        called 'pipe'
+        connects the output of the previous command to the input of the next command.
+    -1
+        splits outputs into their own lines.
+        ls -1
+        ls -1 | grep o  (outputs all folders or files in current directory with an o in their name)
+    >
+        replaces the contents of a file, or just creates a new one if none exist
+    >>
+        appends, or adds on to the end of a file
+    Namespaces provide a hierarchical means of organizing C# programs and libraries. 
+        Namespaces contain types and other namespaces
+    using 
+        A using directive that references a given namespace enables unqualified use of the types that are members of that namespace. 
+        Because of the using directive, the program can use Console.WriteLine as shorthand for System.Console.WriteLine.
+     this 
+        Instance methods can reference a particular enclosing object instance using the keyword this
+     static methods 
+        operate without reference to a particular object 
+        By convention, a static method named Main serves as the entry point of a program.          
+  
+  
+Terminal Commands  
+        rmdir <file or path>
+            deletes directory, but only works if the directory is empty (so most people just use rm -r)
+        touch <file.filetype>
+            looks for a file, creates one if there isnt one there.
+        ls
+            lists all files inside of the current directory
+        pwd
+            print where you are (directory) right now
+        explorer
+            opens a exploer folder, can also put a path. (. uses current directory, or can specify an environment)
+        echo
+            prints out what you type in the console. Usually needs " " around the content. 
+                echo "hi"
+            Can also be used to create a file. Can overwrite a file if there is already one there.
+                echo "hi" > filename.txt
+
+        which
+            Looks up programs, NOT directories
+            Has to be inside the PATH
+                applies everywhere, list of folders that tells computer which folders contain programs that can be run.
+                echo $PATH to see your PATH
+            Returns where exactly the program is located
+        grep
+            Is looking for input equal to what you put after it.
+            echo "some text" | grep text
+            grep grep notes/bash-notes.txt
+        find
+            looks for text in a name, and/or file type
+            find, in a directory, some parameters
+                find (directory) (options) (parameters)
+        cat
+            combines two files, need to specify the path to both. 
+                cat ./file1.txt ./file2.txt
+            can also just return one file
+                cat file1
+        csc
+            compiles a C# file. Mostly just for main comupter terminal
+
+
+
+Git Bash
+    git reset
+        moves the branch backward, as if the commit had never happened
+        git reset HEAD~1
+        Very good when working on a local machine or file, but not great when working with multiple branches
+    git revert
+        creates a new commit that is identical to a previous commit
+        git revert HEAD~1
+    git cherry-pick
+        git cherry-pick <Commit1> <Commit2> <...>
+        copies a series of commits below your current location (HEAD)
+    git rebase <branchname>
+        Has the -i option. This opens up an interation ui
+            pick - can be toggled off to drop a commit
+            can reorder
+            can combine commits
+            e.g. git rebase -i HEAD~4
+    git commit --amend
+        makes a changed copy of currently selected commit, and commits it
+    git tag
+        creates an anchor on your currently selected commit, that does not move as things are changed in the tree.
+        git tag tagname commithash
+            if you leave off the commithash, GIT will just use the HEAD
+    git describe <ref>
+        tells you where you are relative to the closest anchor (aka tag)
+        ref is any commit, if you dont specify one, it will use the HEAD
+        output looks like this: <tag>_<numCommits>_g<hash>
+            tag is closest ancestor
+            numCommits is how many commits away it is
+            hash is the hash of the commit being described
+    ^
+        normally follows the parent, but putting a number after it changes this behavior
+            the number changes which immediate parent it refers to, in the case of multiple parents
+        can also be chained with !
+            eg: git checkout HEAD~^2~2
+    git clone
+        creates a remote batch of your repository.
+        you can refer to the original as origin/branchname
+    git fetch
+        allows you to retrieve data from a remote repository
+    
+
+
+History ??
+    .NET Framework 2002
+        edited in Visual Studio
+        windows only
+        people tried to reverse engineer for Linux (called Mono)
+        desktop apps: windows forms, wpf (windows presentation foundation)
+        databases: entity framework
+        web: asp.net , wcf
+        C#
+    Mono
+        legally questionable at first, but now has been bought by Zano which is owned by Microsoft
+        mobile apps: Xamarin
+        C#
+    .NET Core 2016
+        Microsoft's total rework of .NET framework, in order to be cross platform
+        lightweight, more simple, more elegant
+        rising in popularity
+        most new code is in .NET Core
+        desktop apps: windows forms, wpf (windows presentation foundation)
+        databases: EF Core
+        web: asp.net Core
+        Plan to be renamed to .NET 5  (current version 3.1)
+        C#
+    C# 
+        is a simple, modern, object-oriented, and type-safe programming language.
+        C# further includes support for component-oriented programming
+        Garbage collection 
+            automatically reclaims memory occupied by unreachable unused objects; 
+        exception handling 
+            provides a structured and extensible approach to error detection and recovery; 
+        type-safe 
+            makes it impossible to read from uninitialized variables, to index arrays beyond their bounds, or to perform unchecked type casts.
+        C# has a unified type system. 
+            All C# types, including primitive types such as int and double, inherit from a single root object type. 
+        
+
+
+.NET / C# Code 
+    dotnet new console -n NumbersInCSharp -o . (not 100% what this does, other than makes a new project)
+        -n is short for -name
+
+    There is no exponent operator
+
+    Math.PI = pi
+    // to comment things out
+
+    Operators
+        + symbol for addition
+        - for subtraction
+        * for multiplication
+        / for division
+        % returns remainder
+        = assigns a value
+        &&  AND
+        ||  OR
+        !  NOT
+        == compares equals
+        != NOT equals
+        ++ increment up
+        -- increment down
+    int 
+        The int type represents an integer, a zero, positive, or negative whole number.
+            int uses 4 bytes 
+            Ex: int x = 4;
+                int = datatype, x = variable name, = = initialization, 4 = value
+            Can also be declared and instantiated seperately.
+            Can be changed after being declared and/or assigned a value
+    double
+        The double numeric type represents a double-precision floating point number.
+            Uses 8 bytes of space
+            A floating point number is useful to represent non-integral numbers that may be very large or small in magnitude. 
+            Double-precision means that these numbers are stored using greater precision than single-precision.
+    decimal
+        The decimal type has a smaller range but greater precision than double. 
+            The M suffix on the numbers is how you indicate that a constant should use the decimal type.
+        The term fixed point means that the decimal point (or binary point) doesn't move. 
+    bool
+        A Boolean is a variable that can have one of two values: true or false. 
+            C# defines a special type, bool for Boolean variables. 
+                The if statement checks the value of a bool. 
+                    When the value is true, the statement following the if executes. Otherwise, it is skipped.
+        The while loop tests the condition before executing the code following the while. 
+        The do ... while loop executes the code first, and then checks the condition. 
+        The for loop does the same work as the while loop and the do loop. It has three parts
+            first : initializer: int index = 0; declares that index is the loop variable, and sets its initial value
+            middle : condition: it declares that this for loop continues to execute as long as the value of counter is less
+            third : iterator: specifies how to modify the loop variable after executing the block
+    string
+        anything in " " is a string 
+        can combine strings with +
+        == between strings compares the value, not the reference type
+        surround a variable with {} to use it in the middle of a string. (useful when mainly printing from console)
+
+        .PadLeft(int,string)
+            Fills left int spaces with string
+            This is a method of the String object
