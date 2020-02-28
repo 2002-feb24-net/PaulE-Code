@@ -20,7 +20,7 @@ namespace Day5MorningWork
                 result = result + MyWordList[i].Substring(0,1);
                 MyWordList[i].TrimStart();
             }
-            return result;
+            return result.ToUpper();
         }
     }
 }
