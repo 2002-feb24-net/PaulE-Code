@@ -17,10 +17,9 @@ namespace Day5MorningWork
 
             for (int i=0; i<MyWordList.Length;i++)
             {
-                result = result + MyWordList[i].Substring(0,0);
+                result = result + MyWordList[i].Substring(0,1);
                 MyWordList[i].TrimStart();
             }
-            Console.WriteLine(result);
             return result;
         }
     }
