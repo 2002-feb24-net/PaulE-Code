@@ -24,7 +24,7 @@ namespace RockPaperScissors
         public char randomChoice()
         {
             Random rnd = new Random();
-            int x = rnd.Next(1,3);
+            int x = rnd.Next(1,4);
             switch (x)
             {
                 case 1:
