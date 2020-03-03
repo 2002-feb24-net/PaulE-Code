@@ -15,7 +15,7 @@ namespace RockPaperScissors
                 Console.WriteLine("Do you want to play a round? ");
                 string input = Console.ReadLine();
 
-                if (input.ToUpper == "N")
+                if (input.ToUpper() == "N")
                 {
                     readyToQuit = true;
                 }
