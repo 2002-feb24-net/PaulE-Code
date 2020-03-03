@@ -12,16 +12,8 @@ namespace Day2Exercise1
                 // c# has, alongside string (make with "double quotes")
                 // also has "char" (character) (make with 's' ingle quotes)
                 Console.WriteLine(new String(' ', length - i) + new String('#', i));
-
-                // for (int j = 0; j < length - i; j++)
-                // {
-                //     Console.Write(" ");
-                // }
-                // for (int j = 0; j < i; j++)
-                // {
-                //     Console.Write("#");
-                // }
-                // Console.WriteLine(); // line break
+                string[] MyString = new string[] {"hi","bye"};
+                MyString[1].Substring(0,1);
             }
         }
     }

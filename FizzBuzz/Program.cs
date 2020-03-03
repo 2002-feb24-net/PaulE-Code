@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace FizzBuzz
 {
@@ -33,8 +34,15 @@ namespace FizzBuzz
                 }
                 Console.WriteLine();
             }
-            Console.Write("Fizz: {0} Buzz:{1} Fizzbuzz:{2}", CountFizz, CountBuzz, CountFizzBuzz);
+            Console.WriteLine("Fizz: {0} Buzz:{1} Fizzbuzz:{2}", CountFizz, CountBuzz, CountFizzBuzz);
             // Fizz = 267 Buzz = 133 Fizzbuzz = 67
+            int[] myArray = new int[] {6,2,3,8};
+            makeArrayConsecutive2(myArray);
+        }
+        static int makeArrayConsecutive2(int[] sequence) 
+        {
+            Console.WriteLine(sequence.Max() + " " + sequence.Min() + " " + sequence.Length + " " + 1);
+            return sequence.Max() - sequence.Min() - sequence.Length + 1;
         }
     }
 }
