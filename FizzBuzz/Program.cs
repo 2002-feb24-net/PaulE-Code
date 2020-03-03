@@ -5,6 +5,7 @@ namespace FizzBuzz
 {
     class Program
     {
+        public static readonly int a = 5;
         static void Main(string[] args)
         {
             int input = 1000;
