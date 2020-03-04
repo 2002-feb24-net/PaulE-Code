@@ -8,7 +8,7 @@ namespace Lists
         static void Main(string[] args)
         {
             List<int> numbers = new List<int>();
-            int howMany = numbers.Count();
+            int howMany = numbers.Count;
             numbers.Add(123);
             int firstItem = numbers[0];
             // int thirdItem = numbers[2];
@@ -22,9 +22,11 @@ namespace Lists
 
             numbers.RemoveAt(2);
             numbers.Remove(500);
-
+            
+            int sum = 0;
             foreach(int num in numbers)
             {
+
                 sum += sum;
             }
         }
