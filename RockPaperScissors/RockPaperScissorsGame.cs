@@ -108,8 +108,25 @@ namespace RockPaperScissors
                 }
                 Console.Write(x+",");
             }
+
             Console.WriteLine();
             Console.WriteLine("Wins: {0} Losses: {1} Ties: {2}", numW,numL,numT);
+
+            if (numW == numL)
+            {
+                Console.WriteLine("Tie game overall!");
+            }
+            else if (numW > numL)
+            {
+                Console.WriteLine("You win overall!");
+            }
+            else if (numW < numL)
+            {
+                Console.WriteLine("The computer wins overall!");
+            }
+
+
+
             if (numL == 0 && numW == 0)
             {
                 Console.WriteLine("The goal was not to guess the same as the computer btw. See you next time.");
@@ -122,6 +139,8 @@ namespace RockPaperScissors
             {
                 Console.WriteLine("Unlucky game. Better luck next time.");
             }
+
+
         }
     }
 }
