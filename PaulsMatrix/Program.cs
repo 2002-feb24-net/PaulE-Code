@@ -72,6 +72,7 @@ namespace PaulsMatrix
                 case 'T':
                 Matrix1.Transpose();
                 Matrix2.Transpose();
+                break;
             }
         }
     }
