@@ -23,7 +23,7 @@ namespace PaulsMatrix
             Matrix2.PrintMatrix();
 
             Console.WriteLine("What would you like to do with these two matrixes?");
-            Console.WriteLine("OPTIONS: ADD, SUBTRACT, MULTIPLY, REVERSE");
+            Console.WriteLine("OPTIONS: ADD, SUBTRACT, MULTIPLY, REVERSE, NEGATE, TRANSPOSE");
             Question2(Matrix1,Matrix2);
         }
 
@@ -63,6 +63,15 @@ namespace PaulsMatrix
                 Matrix1.Reverse();
                 Matrix2.Reverse();
                 break;
+
+                case 'N':
+                Matrix1.Negation();
+                Matrix2.Negation();
+                break;
+
+                case 'T':
+                Matrix1.Transpose();
+                Matrix2.Transpose();
             }
         }
     }

@@ -67,6 +67,30 @@ namespace PaulsMatrix
             Console.WriteLine("[{0} , {1}]", MyMatrix[1,0], MyMatrix[1,1]);
         }
 
+        public void Negation()
+        {
+            int total1 = this.MyMatrix[0,0]*-1; 
+            int total2 = this.MyMatrix[0,1]*-1; 
+            int total3 = this.MyMatrix[1,0]*-1;
+            int total4 = this.MyMatrix[1,1]*-1;
+            Console.WriteLine("[{0} , {1}]", total1, total2);
+            Console.WriteLine("[{0} , {1}]", total3, total3);
+        }
+
+        public void Transpose()
+        {
+            int total1 = this.MyMatrix[0,0]; 
+            int total2 = this.MyMatrix[0,1]; 
+            int total3 = this.MyMatrix[1,0];
+            int total4 = this.MyMatrix[1,1];
+            this.MyMatrix[0,0] = total2;
+            this.MyMatrix[0,1] = total1;
+            this.MyMatrix[1,0] = total4;
+            this.MyMatrix[1,1] = total3;
+            Console.WriteLine("[{0} , {1}]", MyMatrix[0,0], MyMatrix[0,1]);
+            Console.WriteLine("[{0} , {1}]", MyMatrix[1,0], MyMatrix[1,1]);
+        }
+
         public void PrintMatrix()
         {
             for (int i = 0;i<2;i++)
