@@ -45,10 +45,10 @@ namespace PaulsMatrix
 
         public void Multiply(Matrix x)
         {
-            int total1 = this.MyMatrix[0,0] * x.Get(0,0);
-            int total2 = this.MyMatrix[0,1] * x.Get(0,1);
-            int total3 = this.MyMatrix[1,0] * x.Get(1,0);
-            int total4 = this.MyMatrix[1,1] * x.Get(1,1);
+            int total1 = (this.MyMatrix[0,0] * x.Get(0,0)) + (this.MyMatrix[0,1] * x.Get(1,0));
+            int total2 = (this.MyMatrix[0,0] * x.Get(1,0)) + (this.MyMatrix[0,1] * x.Get(1,1));
+            int total3 = (this.MyMatrix[1,0] * x.Get(0,0)) + (this.MyMatrix[1,1] * x.Get(0,1));
+            int total4 = (this.MyMatrix[1,0] * x.Get(0,1)) + (this.MyMatrix[1,1] * x.Get(1,1));
             Console.WriteLine("[{0} , {1}]", total1, total2);
             Console.WriteLine("[{0} , {1}]", total3, total4);
         }

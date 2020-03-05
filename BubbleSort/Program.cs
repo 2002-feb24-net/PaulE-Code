@@ -7,7 +7,6 @@ namespace BubbleSort
         static void Main(string[] args)
         {
             int[] MyArray = GetInput();
-            //BubbleSort(MyArray);
             foreach (int var in BubbleSort(MyArray))
             {
                 Console.Write(var+",");
