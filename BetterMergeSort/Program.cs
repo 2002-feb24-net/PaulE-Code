@@ -28,24 +28,26 @@ namespace BetterMergeSort
 
             int l = 0;
             int r = 0;
-            int[] result = new int[array.Length];
+            //int[] result = new int[array.Length];
             for (int i = 0; i < array.Length; i++)
             {
                 if(l >= left.Length)
                 {
-                    result[i] = right[r++];
+                    array[i] = right[r++];
                 }
                 else if (r >= right.Length)
                 {
-                    result[i] = left[l++];
+                    array[i] = left[l++];
                 }
+
+
                 if (left[l] <= right[r])
                 {
-                    result[i] = left[l++];
+                    array[i] = left[l++];
                 }
                 else
                 {
-                    result[i] = right[r++];
+                    array[i] = right[r++];
                 }
             }
 
