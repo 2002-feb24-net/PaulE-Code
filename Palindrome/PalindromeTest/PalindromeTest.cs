@@ -18,6 +18,8 @@ namespace PalindromeTest
         [Theory]
         [InlineData("one two one")]
         [InlineData("123abccba123")]
+        [InlineData("ywereewy")]
+        [InlineData("what ^rt^ tahw")]
         public void TestPalindromeFalse(string value)
         {
             Palindrome MyPalindrome = new Palindrome();
@@ -31,6 +33,9 @@ namespace PalindromeTest
         [InlineData("racecaR")]
         [InlineData("1221")]
         [InlineData("never odd, or even.")]
+        [InlineData("")]
+        [InlineData("12321")]
+        [InlineData("A")]
         public void TestPalindromeTrue(string value)
         {
             Palindrome MyPalindrome = new Palindrome();
