@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfRestaurant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Restaurant>
+    <Id>0</Id>
+    <Name>Fred's Restraunt</Name>
+    <Reviews>
+      <Review>
+        <Id>0</Id>
+        <ReviewerName>Paul</ReviewerName>
+        <Score>8</Score>
+        <Text>It was pretty good</Text>
+      </Review>
+    </Reviews>
+  </Restaurant>
+</ArrayOfRestaurant>

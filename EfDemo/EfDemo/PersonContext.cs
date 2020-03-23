@@ -29,7 +29,7 @@ namespace EfDemo
             //optionsBuilder.UseSqlite("Data Source=../../../person.db");
 
             // need another package for this (Microsoft.EntityFrameworkCore.SqlServer)
-            optionsBuilder.UseSqlServer(SecretConfiguration.ConnectionString);
+            optionsBuilder.UseSqlServer(SecretConfiguration.Server);
             // ^ this line will have a compile error when you clone it... because my SecretConfiguration
             // file is gitignored. you need to make your own if you want to run this code on your laptop,
             // like this:
