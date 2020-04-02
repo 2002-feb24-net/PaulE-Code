@@ -1,0 +1,45 @@
+body 
+{
+    background-color: burlywood;
+    text-align: center;
+}
+
+header
+{
+    text-align:center;
+	color:white;
+	font-size:10px;
+	font-stretch:wider;
+	font-family:"Comic Sans MS", cursive;
+	text-decoration:none;
+}
+
+i
+{
+    background-color:black;
+    color : yellow;
+}
+
+ul
+{
+    opacity:0.7;
+	color:white;
+	width:550px;
+	height:350px;
+	margin-top:0px;
+	margin-right:300px;
+}
+
+.myTable
+{
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    border-color:#585858;
+    border-style: outset;
+	text-align:center;
+	width:200px;
+	height:200px;
+	margin-top:50px;
+	margin-right:50px;
+}
